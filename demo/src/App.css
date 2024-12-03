@@ -1,0 +1,108 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.headerSection {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    padding-top: 20px;
+    width: 100%; /* Ensure full width */
+}
+
+.center ul li {
+    list-style: none;
+    display: inline-flex;
+    margin: 0px 5px;
+}
+
+.title {
+    font-size: 1rem;
+}
+
+.center {
+    flex: 4;
+}
+
+.search {
+    flex: 2;
+}
+
+.search input {
+    padding: 10px;
+    width: 100%; /* Full width for responsiveness */
+    border-radius: 5px;
+    margin: 0; /* Remove margin for centering */
+}
+
+.right {
+    flex: 4;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.bannerBox {
+    margin: 10px 0px;
+}
+
+.bannerBox img {
+    width: 100%; /* Full-screen width for the banner */
+}
+
+.menImages {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Allow items to wrap for smaller screens */
+    justify-content: center;
+}
+
+.menImages img {
+    width: 100%; /* Adjust to grid width */
+    max-width: 200px; /* Restrict max size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .headerSection {
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Full screen */
+    }
+
+    .center ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .search input {
+        width: 100%; /* Full screen */
+        margin: 0;
+    }
+
+    .right {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        width: 100%; /* Full screen */
+    }
+
+    .menImages {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
+        gap: 10px;
+    }
+
+    .menImages img {
+        width: 100%; /* Fit the grid cell */
+        height: auto;
+    }
+}
